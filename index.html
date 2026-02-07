@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charito’s Chocolate</title>
+  <meta name="description" content="Handcrafted chocolates made with love. Gift boxes, truffles, and custom orders." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Charito’s Chocolate home">
+        <span class="brand__mark">🍫</span>
+        <span class="brand__name">Charito’s Chocolate</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#shop">Shop</a>
+        <a href="#story">Our Story</a>
+        <a href="#catering">Custom</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1>Handcrafted chocolates made to feel like a gift. ✨</h1>
+          <p>
+            Small-batch truffles, bars, and curated gift boxes. Perfect for birthdays,
+            weddings, corporate gifting, and “just because.”
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#shop">Browse bestsellers</a>
+            <a class="btn btn--ghost" href="#contact">Request a custom box</a>
+          </div>
+          <ul class="hero__badges" role="list">
+            <li>Small-batch</li>
+            <li>Gift-ready packaging</li>
+            <li>Custom orders</li>
+          </ul>
+        </div>
+
+        <div class="hero__card" aria-label="Featured products">
+          <div class="card">
+            <h2>Featured</h2>
+            <div class="products">
+              <article class="product">
+                <h3>Signature Truffle Box</h3>
+                <p>Assorted flavors • 12 pieces</p>
+                <span class="tag">Bestseller</span>
+              </article>
+              <article class="product">
+                <h3>Sea Salt Caramel Bites</h3>
+                <p>Rich caramel • flaky salt</p>
+                <span class="tag">Fan favorite</span>
+              </article>
+              <article class="product">
+                <h3>Dark Chocolate Bark</h3>
+                <p>Nuts + fruit • snackable</p>
+                <span class="tag">Limited</span>
+              </article>
+            </div>
+            <p class="note">Want online checkout? We can connect Square/Shopify next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Shop</h2>
+          <p>Start simple: list your products here and link to checkout (or DM orders).</p>
+        </div>
+
+        <div class="grid">
+          <div class="tile">
+            <h3>Gift Boxes</h3>
+            <p>Curated assortments for any occasion.</p>
+          </div>
+          <div class="tile">
+            <h3>Truffles</h3>
+            <p>Classic + seasonal flavors, handmade.</p>
+          </div>
+          <div class="tile">
+            <h3>Bars & Bark</h3>
+            <p>Snap-worthy, shareable favorites.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p><strong>Ordering:</strong> Add your checkout link here.</p>
+          <a class="btn btn--small" href="#" aria-label="Order link placeholder">Add Order Link</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Our Story</h2>
+          <p>Write a warm paragraph about Charito—why she started, what makes it special.</p>
+        </div>
+        <div class="prose">
+          <p>
+            Charito’s Chocolate is a family-made chocolate studio focused on flavor, care, and
+            beautiful presentation. We make small batches to keep quality high and every order personal.
+          </p>
+          <p>
+            Replace this text with your real story—origin, inspirations, ingredients, and your “why.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="catering" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Custom & Events</h2>
+          <p>Weddings, baby showers, corporate gifting, holidays 🎁</p>
+        </div>
+
+        <div class="grid">
+          <div class="tile">
+            <h3>Custom Boxes</h3>
+            <p>Choose flavors, colors, and packaging.</p>
+          </div>
+          <div class="tile">
+            <h3>Party Favors</h3>
+            <p>Individually wrapped treats with labels.</p>
+          </div>
+          <div class="tile">
+            <h3>Corporate Gifts</h3>
+            <p>Branded notes + bulk pricing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p>Use the form or email/IG. We’ll wire up a real form endpoint if you want.</p>
+        </div>
+
+        <div class="contact">
+          <form class="form" action="#" method="post">
+            <label>
+              Name
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn" type="submit" disabled title="Connect a form provider to enable">
+              Send (enable later)
+            </button>
+            <p class="note">We’ll connect Formspree/Netlify Forms so this actually sends.</p>
+          </form>
+
+          <div class="contact__info">
+            <div class="card">
+              <h3>Quick info</h3>
+              <p><strong>Email:</strong> yourname@charitoschocolate.com</p>
+              <p><strong>Instagram:</strong> @charitoschocolate</p>
+              <p><strong>Location:</strong> (City/Region)</p>
+              <p class="note">Add business hours + pickup/shipping details here.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p>© <span id="year"></span> Charito’s Chocolate. All rights reserved.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
