@@ -7,9 +7,11 @@
   --radius:18px;
 }
 
+/* Reset */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 
+/* Base */
 body{
   font-family: ui-serif, Georgia, serif;
   background:
@@ -18,21 +20,40 @@ body{
   color:var(--text);
 }
 
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
 
 /* Header */
 .header{
-  position:sticky;top:0;z-index:10;
+  position:sticky;
+  top:0;
+  z-index:10;
   background:rgba(11,11,13,.85);
   border-bottom:1px solid rgba(212,175,55,.25);
 }
+
 .header__inner{
-  display:flex;justify-content:space-between;align-items:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   padding:14px 0;
 }
-.brand{display:flex;gap:10px;font-weight:700}
+
+.brand{
+  display:flex;
+  gap:10px;
+  font-weight:700;
+}
+
 .brand__mark{color:var(--gold)}
-.brand__name{text-transform:uppercase;font-size:14px;letter-spacing:.5px}
+.brand__name{
+  text-transform:uppercase;
+  font-size:14px;
+  letter-spacing:.5px;
+}
 
 .nav a{
   margin-left:16px;
@@ -42,55 +63,111 @@ body{
 }
 .nav a:hover{color:var(--text)}
 
-/* Hero */
+/* =======================
+   HERO
+======================= */
 .hero{
   position:relative;
   padding:90px 0 80px;
+  overflow:hidden;
 }
-.hero__grid{max-width:720px}
-.kicker{color:var(--gold);font-size:12px;text-transform:uppercase}
-.hero h1{font-size:46px;margin:16px 0}
-.lead{max-width:600px;color:var(--muted)}
-.hero__cred{margin-top:10px;color:var(--muted)}
+
+.hero__grid{
+  max-width:720px;
+}
+
+.hero__copy{
+  position:relative;
+  z-index:3; /* stays above hero image */
+}
+
+.kicker{
+  color:var(--gold);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+}
+
+.hero h1{
+  font-size:46px;
+  margin:16px 0;
+  line-height:1.05;
+}
+
+.lead{
+  max-width:600px;
+  color:var(--muted);
+}
+
+.hero__cred{
+  margin-top:10px;
+  color:var(--muted);
+}
+
 .hero__cta{margin-top:20px}
 
-/* Floating top-right hero image — anchored top-right, grows down + left */
+/* === HERO IMAGE (FINAL STATE) === */
+/* Behind text, anchored top-right, grows down + left, vignette */
 .hero-corner{
-  position: absolute;
+  position:absolute;
 
-  /* anchor position */
-  top: -90px;
-  right: 40px;
+  /* anchor */
+  top:-90px;
+  right:40px;
 
-  /* size control */
-  height: clamp(420px, 60vh, 1250px);
-  width: auto;
+  /* size */
+  height:clamp(420px, 60vh, 1250px);
+  width:auto;
 
-  /* 🔑 THIS IS THE FIX */
-  transform: scale(1.85);
-  transform-origin: top right;
+  /* scale behavior */
+  transform:scale(1.85);
+  transform-origin:top right;
 
-  z-index: 5;
-  pointer-events: none;
+  /* layer */
+  z-index:1;
+  pointer-events:none;
+
+  /* 50% circular vignette */
+  mask-image: radial-gradient(
+    circle at 65% 35%,
+    rgba(0,0,0,1) 50%,
+    rgba(0,0,0,0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at 65% 35%,
+    rgba(0,0,0,1) 50%,
+    rgba(0,0,0,0) 100%
+  );
+
+  opacity:0.85;
 }
 
 /* Buttons */
 .btn{
   background:linear-gradient(#d4af37,#b8962e);
-  color:#000;padding:10px 16px;
-  border-radius:14px;font-weight:700;
-}
-.btn--ghost{
-  background:none;border:1px solid rgba(255,255,255,.2);
-  color:var(--text);margin-left:12px;
+  color:#000;
+  padding:10px 16px;
+  border-radius:14px;
+  font-weight:700;
 }
 
-/* Sections */
+.btn--ghost{
+  background:none;
+  border:1px solid rgba(255,255,255,.2);
+  color:var(--text);
+  margin-left:12px;
+}
+
+/* =======================
+   SECTIONS
+======================= */
 .section{padding:60px 0}
+
 .section--light{
   background:linear-gradient(#faf8f2,#f1ece2);
   color:#0b0b0d;
 }
+
 .section__head h2{font-size:30px}
 .section__head p{color:#555}
 .center{text-align:center}
@@ -101,7 +178,13 @@ body{
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
-.tile{border:1px solid rgba(255,255,255,.2);padding:18px;border-radius:18px}
+
+.tile{
+  border:1px solid rgba(255,255,255,.2);
+  padding:18px;
+  border-radius:18px;
+}
+
 .tile--light{background:#fff}
 
 /* Gallery */
@@ -110,28 +193,41 @@ body{
   grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
   gap:14px;
 }
+
 .gallery img{
-  width:100%;height:280px;
+  width:100%;
+  height:280px;
   object-fit:cover;
   border-radius:18px;
   border:1px solid rgba(212,175,55,.25);
 }
 
 /* Footer */
-.footer{text-align:center;padding:20px}
+.footer{
+  text-align:center;
+  padding:20px;
+}
+
 .footer--light{color:#555}
 
-/* Mobile */
+/* =======================
+   MOBILE
+======================= */
 @media (max-width:768px){
   .hero-corner{
     position:relative;
     top:0;
     right:0;
+    transform:none;
+    mask-image:none;
+    -webkit-mask-image:none;
+    opacity:1;
     display:block;
     margin:30px auto 0;
     height:auto;
     max-height:300px;
   }
+
   .grid{grid-template-columns:1fr}
   .hero h1{font-size:34px}
 }
