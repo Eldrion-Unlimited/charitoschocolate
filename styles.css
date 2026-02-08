@@ -91,3 +91,71 @@ body{
 }
 
 .footer{text-align:center;padding:20px}
+
+/* HERO CUT-OUT LAYOUT */
+.hero--cutout{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(800px 500px at 15% 20%, rgba(212,175,55,.22), transparent 60%),
+    linear-gradient(180deg, #070708 0%, #0b0b0d 100%);
+}
+
+.hero__stage{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:100px 20px 80px;
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
+
+.hero__copy{
+  z-index:2;
+}
+
+.hero__figure{
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.hero__figure img{
+  max-height:85vh;
+  width:auto;
+  max-width:100%;
+  object-fit:contain;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,.55));
+}
+
+/* Typography tuning */
+.hero--cutout h1{
+  font-size:52px;
+  line-height:1.04;
+  margin:0 0 18px;
+}
+
+@media (max-width: 900px){
+  .hero__stage{
+    grid-template-columns:1fr;
+    padding-top:120px;
+    text-align:left;
+  }
+
+  .hero__figure{
+    justify-content:center;
+    margin-top:30px;
+  }
+
+  .hero__figure img{
+    max-height:60vh;
+  }
+
+  .hero--cutout h1{
+    font-size:36px;
+  }
+}
