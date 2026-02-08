@@ -1,6 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Charito’s Chocolate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Charito’s Chocolate — hand-painted, handcrafted chocolate bonbons crafted with fine-dining precision at the St. Regis." />
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <div class="brand">
+      <span class="brand__mark">◆</span>
+      <span class="brand__name">Charito’s Chocolate</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#bonbons">Bonbons</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#story">Story</a>
+      <a href="#custom">Custom</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
 <!-- HERO -->
-<section class="hero hero--cutout">
-  <div class="hero__stage">
+<section class="hero">
+  <!-- TOP RIGHT IMAGE -->
+  <img src="heromom1.png"
+       alt="Charito, Pastry Chef de Partie at the St. Regis"
+       class="hero-corner">
+
+  <div class="container hero__grid">
     <div class="hero__copy">
       <p class="kicker">Hand-painted • Small-batch • Fine-dining precision</p>
 
@@ -24,9 +61,136 @@
         <a class="btn btn--ghost" href="#custom">Request a Custom Collection</a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="hero__figure">
-      <img src="heromom1.png" alt="Charito standing beside handcrafted chocolate frames">
+<!-- BONBONS -->
+<section id="bonbons" class="section section--light">
+  <div class="container">
+    <div class="section__head center">
+      <h2>Bonbon Artistry</h2>
+      <p>Every piece is individually painted, filled, and finished by hand.</p>
+    </div>
+
+    <div class="grid">
+      <div class="tile tile--light">
+        <h3>Hand-Painted Shells</h3>
+        <p>No two bonbons are ever exactly alike.</p>
+      </div>
+      <div class="tile tile--light">
+        <h3>Small-Batch Flavor</h3>
+        <p>Balanced, fresh fillings with a precise burst of flavor.</p>
+      </div>
+      <div class="tile tile--light">
+        <h3>St. Regis Standard</h3>
+        <p>Crafted with fine-dining discipline and luxury presentation.</p>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Signature Gallery</h2>
+      <p>A curated glimpse into the craft.</p>
+    </div>
+
+    <div class="gallery">
+      <img src="bonbon1.png" alt="Hand-painted chocolate bonbon">
+      <img src="bonbon2.png" alt="Artisan chocolate bonbon detail">
+      <img src="bonbon3.png" alt="Luxury chocolate bonbon assortment">
+      <img src="bonbon4.png" alt="Hand-painted bonbon with cocoa butter design">
+      <img src="bonbon5.png" alt="Fine-dining chocolate bonbon presentation">
+      <img src="frame1.png" alt="Handcrafted chocolate frames">
+      <img src="smile.png" alt="A joyful moment in the chocolate kitchen">
+      <img src="mom1.png" alt="Charito standing beside handcrafted chocolate frames in the pastry kitchen">
+      <img src="mom2.png" alt="Charito crafting bonbons in the pastry kitchen">
+      <img src="mom3.png" alt="Charito finishing bonbons at work">
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="section section--light">
+  <div class="container">
+    <div class="section__head">
+      <h2>Our Story</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        Charito is a Pastry Chef de Partie specializing in hand-painted,
+        handcrafted chocolate bonbons that are as visually striking
+        as they are unforgettable to taste.
+      </p>
+
+      <p>
+        Her work blends classical pastry technique with bold, modern
+        flavor pairings — chocolate designed to elevate the moment it’s served.
+      </p>
+
+      <p>
+        From refined dining rooms to custom gift collections,
+        Charito’s Chocolate is created for people who believe
+        chocolate should feel intentional, luxurious, and deeply memorable.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM -->
+<section id="custom" class="section">
+  <div class="container">
+    <div class="section__head center">
+      <h2>Custom & Events</h2>
+      <p>Designed for gifting, celebrations, and refined experiences.</p>
+    </div>
+
+    <div class="grid">
+      <div class="tile">
+        <h3>Custom Bonbon Boxes</h3>
+        <p>Tailored flavors, colors, and presentation.</p>
+      </div>
+      <div class="tile">
+        <h3>Weddings & Celebrations</h3>
+        <p>Elegant favors for unforgettable occasions.</p>
+      </div>
+      <div class="tile">
+        <h3>Corporate & Hospitality</h3>
+        <p>Refined gifting for professional environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section--light">
+  <div class="container">
+    <div class="section__head">
+      <h2>Contact</h2>
+      <p>Inquiries for custom collections and collaborations.</p>
+    </div>
+
+    <div class="card card--light">
+      <p>
+        For custom collections, events, or collaborations,
+        please reach out via email or Instagram.
+      </p>
+      <p class="note">
+        Online ordering and inquiry forms coming soon.
+      </p>
+    </div>
+
+    <footer class="footer footer--light">
+      <p>© <span id="year"></span> Charito’s Chocolate. All rights reserved.</p>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
