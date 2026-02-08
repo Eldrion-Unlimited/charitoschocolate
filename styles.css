@@ -59,7 +59,7 @@ body{
   position:absolute;
   top:40px;
   right:40px;
-  max-height:420px;
+  max-height:610px; /* ~45% larger */
   width:auto;
   z-index:3;
   pointer-events:none;
