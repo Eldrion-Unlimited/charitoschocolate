@@ -295,3 +295,13 @@ body{
   .hero h1{font-size:34px}
   .btn--ghost{margin-left:10px}
 }
+/* iPhone micro-adjustment */
+@media (max-width: 430px) {
+  .hero {
+    background-position: top right;
+  }
+
+  .hero::before {
+    transform: translate(10px, -10px) scale(1.0);
+  }
+}
