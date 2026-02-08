@@ -54,15 +54,21 @@ body{
 .hero__cred{margin-top:10px;color:var(--muted)}
 .hero__cta{margin-top:20px}
 
-/* Floating top-right image */
+/* Floating top-right hero image — enlarged from bottom-left */
 .hero-corner{
-  position:absolute;
-  top:-60px;              /* ← lifted back into hero */
-  right:40px;
-  height:clamp(420px,60vh,1250px);
-  width:auto;
-  z-index:5;
-  pointer-events:none;
+  position: absolute;
+  top: -60px;
+  right: 40px;
+
+  height: clamp(420px, 60vh, 1250px);
+  width: auto;
+
+  /* 🔑 KEY PART */
+  transform: scale(2);
+  transform-origin: bottom left;
+
+  z-index: 5;
+  pointer-events: none;
 }
 
 /* Buttons */
