@@ -264,8 +264,8 @@ body{
   }
 
   .hero-corner{
-    top:-60px;
-    right:18px;
+    top:-70px;
+    right:8px;
     transform:scale(1.35);
     height:clamp(360px, 52vh, 820px);
     opacity:0.9;
