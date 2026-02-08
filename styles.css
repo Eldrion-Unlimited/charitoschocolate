@@ -10,6 +10,7 @@
 /* Reset */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
 
 /* Base */
 body{
@@ -46,6 +47,7 @@ body{
   display:flex;
   gap:10px;
   font-weight:700;
+  align-items:center;
 }
 
 .brand__mark{color:var(--gold)}
@@ -55,11 +57,20 @@ body{
   letter-spacing:.5px;
 }
 
+/* Make nav not blob-wrap ugly on mid widths */
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:flex-end;
+}
+
 .nav a{
-  margin-left:16px;
+  margin-left:0;
   color:var(--muted);
   font-size:12px;
   text-transform:uppercase;
+  text-decoration:none;
 }
 .nav a:hover{color:var(--text)}
 
@@ -70,6 +81,7 @@ body{
   position:relative;
   padding:90px 0 80px;
   overflow:hidden;
+  isolation:isolate; /* helps mask + stacking behave consistently */
 }
 
 .hero__grid{
@@ -106,7 +118,7 @@ body{
 
 .hero__cta{margin-top:20px}
 
-/* === HERO IMAGE (FINAL STATE) === */
+/* === HERO IMAGE (DESKTOP DEFAULT) === */
 /* Behind text, anchored top-right, grows down + left, vignette */
 .hero-corner{
   position:absolute;
@@ -144,11 +156,13 @@ body{
 
 /* Buttons */
 .btn{
+  display:inline-block;
   background:linear-gradient(#d4af37,#b8962e);
   color:#000;
   padding:10px 16px;
   border-radius:14px;
   font-weight:700;
+  text-decoration:none;
 }
 
 .btn--ghost{
@@ -202,18 +216,67 @@ body{
   border:1px solid rgba(212,175,55,.25);
 }
 
+/* Prose (you used .prose in HTML, so style it) */
+.prose{
+  max-width:780px;
+  line-height:1.75;
+  font-size:16px;
+}
+.prose p{margin:0 0 14px}
+
+/* Card (you used .card and .card--light in HTML) */
+.card{
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:18px;
+  padding:18px;
+}
+.card--light{
+  background:#fff;
+  color:#0b0b0d;
+  border:1px solid rgba(0,0,0,.08);
+}
+.note{
+  color:#666;
+  font-size:14px;
+  margin-top:10px;
+}
+
 /* Footer */
 .footer{
   text-align:center;
   padding:20px;
 }
-
 .footer--light{color:#555}
 
+
 /* =======================
-   MOBILE
+   TABLET FIX (iPad mini portrait lives here)
+   Keep her in the TOP RIGHT (absolute),
+   just tame the scale/position so it fits.
 ======================= */
-@media (max-width:768px){
+@media (max-width:1024px){
+  .hero{
+    padding:70px 0 60px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-corner{
+    top:-60px;
+    right:18px;
+    transform:scale(1.35);
+    height:clamp(360px, 52vh, 820px);
+    opacity:0.9;
+  }
+}
+
+/* =======================
+   MOBILE (REAL phones)
+   Only stack/center her when screens are actually small.
+======================= */
+@media (max-width:600px){
   .hero-corner{
     position:relative;
     top:0;
@@ -223,11 +286,12 @@ body{
     -webkit-mask-image:none;
     opacity:1;
     display:block;
-    margin:30px auto 0;
+    margin:22px auto 0;
     height:auto;
-    max-height:300px;
+    max-height:320px;
   }
 
   .grid{grid-template-columns:1fr}
   .hero h1{font-size:34px}
+  .btn--ghost{margin-left:10px}
 }
