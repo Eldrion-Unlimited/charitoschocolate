@@ -3,183 +3,204 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Charito’s Chocolate</title>
-  <meta name="description" content="Handcrafted chocolates made with love. Gift boxes, truffles, and custom orders." />
+  <title>Charo’s Chocolate</title>
+  <meta name="description" content="Hand-painted chocolate bonbons crafted by a Pastry Chef de Partie. Luxury, small-batch, unforgettable flavor." />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Charito’s Chocolate home">
+      <div class="brand">
         <span class="brand__mark">🍫</span>
-        <span class="brand__name">Charito’s Chocolate</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#shop">Shop</a>
-        <a href="#story">Our Story</a>
-        <a href="#catering">Custom</a>
+        <span class="brand__name">Charo’s Chocolate</span>
+      </div>
+      <nav class="nav">
+        <a href="#bonbons">Bonbons</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#story">Story</a>
+        <a href="#custom">Custom</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero__grid">
-        <div class="hero__copy">
-          <h1>Handcrafted chocolates made to feel like a gift. ✨</h1>
+        <div>
+          <h1>Hand-painted chocolate bonbons.<br>
+          Crafted for moments worth remembering.</h1>
+
           <p>
-            Small-batch truffles, bars, and curated gift boxes. Perfect for birthdays,
-            weddings, corporate gifting, and “just because.”
+            Charo creates handcrafted, hand-painted chocolate bonbons designed
+            to deliver a true burst-in-your-mouth experience. Every piece is made
+            in small batches with obsessive attention to flavor, texture, and detail.
           </p>
+
+          <p class="hero__cred">
+            Pastry Chef de Partie at
+            <strong>Atlas</strong>
+            and the Garden Room —
+            <strong>St. Regis Atlanta</strong>
+          </p>
+
           <div class="hero__cta">
-            <a class="btn" href="#shop">Browse bestsellers</a>
-            <a class="btn btn--ghost" href="#contact">Request a custom box</a>
+            <a class="btn" href="#bonbons">Explore the Bonbons</a>
+            <a class="btn btn--ghost" href="#custom">Request a Custom Collection</a>
           </div>
-          <ul class="hero__badges" role="list">
-            <li>Small-batch</li>
-            <li>Gift-ready packaging</li>
-            <li>Custom orders</li>
-          </ul>
         </div>
 
-        <div class="hero__card" aria-label="Featured products">
-          <div class="card">
-            <h2>Featured</h2>
-            <div class="products">
-              <article class="product">
-                <h3>Signature Truffle Box</h3>
-                <p>Assorted flavors • 12 pieces</p>
-                <span class="tag">Bestseller</span>
-              </article>
-              <article class="product">
-                <h3>Sea Salt Caramel Bites</h3>
-                <p>Rich caramel • flaky salt</p>
-                <span class="tag">Fan favorite</span>
-              </article>
-              <article class="product">
-                <h3>Dark Chocolate Bark</h3>
-                <p>Nuts + fruit • snackable</p>
-                <span class="tag">Limited</span>
-              </article>
-            </div>
-            <p class="note">Want online checkout? We can connect Square/Shopify next.</p>
-          </div>
+        <div class="card">
+          <h2>Signature Focus</h2>
+          <p>
+            Individually painted bonbons crafted with fine-dining discipline
+            and modern flavor profiles.
+          </p>
+          <p class="note">
+            As served in Atlanta’s most refined dining rooms.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="shop" class="section">
+    <!-- BONBONS -->
+    <section id="bonbons" class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Shop</h2>
-          <p>Start simple: list your products here and link to checkout (or DM orders).</p>
+          <h2>Bonbon Artistry</h2>
+          <p>Each piece is painted, filled, and finished entirely by hand.</p>
         </div>
 
         <div class="grid">
           <div class="tile">
-            <h3>Gift Boxes</h3>
-            <p>Curated assortments for any occasion.</p>
+            <h3>Hand-Painted Shells</h3>
+            <p>
+              Every bonbon is individually painted using cocoa butter,
+              ensuring no two are ever exactly alike.
+            </p>
           </div>
-          <div class="tile">
-            <h3>Truffles</h3>
-            <p>Classic + seasonal flavors, handmade.</p>
-          </div>
-          <div class="tile">
-            <h3>Bars & Bark</h3>
-            <p>Snap-worthy, shareable favorites.</p>
-          </div>
-        </div>
 
-        <div class="callout">
-          <p><strong>Ordering:</strong> Add your checkout link here.</p>
-          <a class="btn btn--small" href="#" aria-label="Order link placeholder">Add Order Link</a>
+          <div class="tile">
+            <h3>Small-Batch Flavor</h3>
+            <p>
+              Fillings are produced in small batches to preserve balance,
+              freshness, and a true burst of flavor.
+            </p>
+          </div>
+
+          <div class="tile">
+            <h3>Fine-Dining Precision</h3>
+            <p>
+              Crafted with the same standards expected in luxury hospitality
+              and refined dining environments.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="story" class="section section--alt">
+    <!-- GALLERY -->
+    <section id="gallery" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Signature Gallery</h2>
+          <p>A curated glimpse into the craft.</p>
+        </div>
+
+        <div class="gallery">
+          <!-- Add images later to /assets/gallery/ -->
+          <!-- Example:
+          <img src="assets/gallery/bonbon-01.jpg" alt="Hand-painted chocolate bonbon">
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" class="section">
       <div class="container">
         <div class="section__head">
           <h2>Our Story</h2>
-          <p>Write a warm paragraph about Charito—why she started, what makes it special.</p>
         </div>
+
         <div class="prose">
           <p>
-            Charito’s Chocolate is a family-made chocolate studio focused on flavor, care, and
-            beautiful presentation. We make small batches to keep quality high and every order personal.
+            Charo is a Pastry Chef de Partie specializing in hand-painted,
+            hand-crafted chocolate bonbons that are as visually striking
+            as they are unforgettable to taste.
           </p>
+
           <p>
-            Replace this text with your real story—origin, inspirations, ingredients, and your “why.”
+            Her work blends classical pastry technique with bold, modern
+            flavor pairings — resulting in chocolates designed to surprise
+            the palate and elevate the moment they’re served.
+          </p>
+
+          <p>
+            From fine-dining dessert service to custom gift collections,
+            Charo’s Chocolate is created for people who believe chocolate
+            should feel intentional, luxurious, and deeply memorable.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="catering" class="section">
+    <!-- CUSTOM -->
+    <section id="custom" class="section section--alt">
       <div class="container">
         <div class="section__head">
           <h2>Custom & Events</h2>
-          <p>Weddings, baby showers, corporate gifting, holidays 🎁</p>
+          <p>Designed for gifting, celebrations, and refined experiences.</p>
         </div>
 
         <div class="grid">
           <div class="tile">
-            <h3>Custom Boxes</h3>
-            <p>Choose flavors, colors, and packaging.</p>
+            <h3>Custom Bonbon Boxes</h3>
+            <p>
+              Curated selections with tailored flavors, color palettes,
+              and presentation.
+            </p>
           </div>
+
           <div class="tile">
-            <h3>Party Favors</h3>
-            <p>Individually wrapped treats with labels.</p>
+            <h3>Weddings & Celebrations</h3>
+            <p>
+              Elegant favors and dessert accents crafted for unforgettable occasions.
+            </p>
           </div>
+
           <div class="tile">
-            <h3>Corporate Gifts</h3>
-            <p>Branded notes + bulk pricing.</p>
+            <h3>Corporate & Hospitality</h3>
+            <p>
+              Thoughtful gifting solutions for refined professional environments.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section--alt">
+    <!-- CONTACT -->
+    <section id="contact" class="section">
       <div class="container">
         <div class="section__head">
           <h2>Contact</h2>
-          <p>Use the form or email/IG. We’ll wire up a real form endpoint if you want.</p>
+          <p>Inquiries for custom collections and collaborations.</p>
         </div>
 
-        <div class="contact">
-          <form class="form" action="#" method="post">
-            <label>
-              Name
-              <input name="name" autocomplete="name" required />
-            </label>
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <button class="btn" type="submit" disabled title="Connect a form provider to enable">
-              Send (enable later)
-            </button>
-            <p class="note">We’ll connect Formspree/Netlify Forms so this actually sends.</p>
-          </form>
-
-          <div class="contact__info">
-            <div class="card">
-              <h3>Quick info</h3>
-              <p><strong>Email:</strong> yourname@charitoschocolate.com</p>
-              <p><strong>Instagram:</strong> @charitoschocolate</p>
-              <p><strong>Location:</strong> (City/Region)</p>
-              <p class="note">Add business hours + pickup/shipping details here.</p>
-            </div>
-          </div>
+        <div class="card">
+          <p>
+            For custom bonbon collections, events, or collaborations,
+            please reach out via email or Instagram.
+          </p>
+          <p class="note">
+            Online ordering and inquiry forms coming soon.
+          </p>
         </div>
 
         <footer class="footer">
-          <p>© <span id="year"></span> Charito’s Chocolate. All rights reserved.</p>
+          <p>© <span id="year"></span> Charo’s Chocolate. All rights reserved.</p>
         </footer>
       </div>
     </section>
