@@ -57,11 +57,11 @@ body{
 /* Floating top-right image */
 .hero-corner{
   position:absolute;
-  top:40px;
+  top:-60px;              /* ← lifted back into hero */
   right:40px;
-  max-height:1250px;
+  height:clamp(420px,60vh,1250px);
   width:auto;
-  z-index:3;
+  z-index:5;
   pointer-events:none;
 }
 
@@ -113,11 +113,14 @@ body{
 .footer--light{color:#555}
 
 /* Mobile */
-@media (max-width: 768px){
+@media (max-width:768px){
   .hero-corner{
     position:relative;
+    top:0;
+    right:0;
     display:block;
     margin:30px auto 0;
+    height:auto;
     max-height:300px;
   }
   .grid{grid-template-columns:1fr}
